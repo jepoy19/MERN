@@ -8,7 +8,7 @@ function UpdateItem(){
   const [item, setItem] = useState()
   const [stocks, setStocks] = useState()
   const [price, setPrice] = useState()
-
+  axios.defaults.withCredentials = true;
   const navigate = useNavigate()
 
   useEffect(() => {

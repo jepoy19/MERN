@@ -6,7 +6,7 @@ import axios from 'axios';
 function Item(){
 
     const [items, setItems] = useState([])
-
+    axios.defaults.withCredentials = true;
     useEffect(() => {
         axios.get(import.meta.env.VITE_ENDPOINT+'item')
         .then(result => setItems(result.data))

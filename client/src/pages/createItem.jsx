@@ -7,7 +7,7 @@ function CreateItem(){
     const [stocks, setStocks] = useState()
     const [price, setPrice] = useState()
     const navigate = useNavigate()
-
+    axios.defaults.withCredentials = true;
     const Submit = (e) => {
         e.preventDefault();
         axios.post(import.meta.env.VITE_ENDPOINT+'create',{item, stocks, price})
